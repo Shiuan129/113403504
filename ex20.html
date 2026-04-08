@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  table,th,td {
+    border:1px solid black;
+    border-collapse:collapse;
+  }
+  th {
+    background-color:#666;
+    color:white;
+    padding:10px;
+  }
+  .yellow {
+    background-color:yellow;
+  }
+  td {
+    padding:10px;
+    width:100px;
+  }
+  .fixed-box {
+    position:fixed;
+    top:20px;
+    right:20px;
+    border:3px solid #8eb35d;
+    padding:10px;
+    width:120px;
+  }
+</style>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+    <tr class="yellow">
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr class="yellow">
+      <td>3</td>
+      <td>3</td>
+    </tr>
+  </table>
+
+  <div class="fixed-box">
+    This div element has position:fixed;
+  </div>
+
+</body>
+</html>
