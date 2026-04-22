@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            background-color: #64a5f2;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        .header {
+            background-color: #b5d66d;
+            height: 100px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cyan {
+            background-color: #59bcc9;
+            height: 50px;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 5px;
+        }
+
+        .gray {
+            background-color: #eaeded;
+            height: 40px;
+            margin: 3px;
+        }
+
+        @media screen and (min-width: 480px) {
+            .main-content {
+                flex-direction: row;
+                height: 150px;
+            }
+            
+            .cyan {
+                flex: 1;
+                height: auto;
+            }
+
+            .footer {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header box"></div>
+
+        <div class="main-content">
+            <div class="cyan box"></div>
+            <div class="cyan box"></div>
+            <div class="cyan box"></div>
+        </div>
+
+        <div class="footer">
+            <div class="gray box"></div>
+            <div class="gray box"></div>
+            <div class="gray box"></div>
+            <div class="gray box"></div>
+        </div>
+    </div>
+
+</body>
+</html>
