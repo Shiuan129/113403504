@@ -9,24 +9,25 @@
             display: flex;
             justify-content: center;
             padding: 20px;
+            margin: 0;
         }
 
         .container {
             background-color: white;
             padding: 15px;
             border-radius: 10px;
-            width: 100%;
+            width: 90%;
             max-width: 500px;
         }
 
-        .header {
+        .green-header {
             background-color: #B2D265;
             height: 100px;
             margin-bottom: 10px;
             border-radius: 4px;
         }
 
-        .blue-box-group {
+        .blue-section {
             display: flex;
             flex-direction: row;
             gap: 10px;
@@ -40,7 +41,7 @@
             border-radius: 4px;
         }
 
-        .gray-box-group {
+        .gray-section {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
@@ -53,11 +54,11 @@
         }
 
         @media (max-width: 480px) {
-            .blue-box-group {
+            .blue-section {
                 flex-direction: column;
             }
 
-            .gray-box-group {
+            .gray-section {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -66,15 +67,15 @@
 <body>
 
     <div class="container">
-        <div class="header"></div>
+        <div class="green-header"></div>
 
-        <div class="blue-box-group">
+        <div class="blue-section">
             <div class="blue-box"></div>
             <div class="blue-box"></div>
             <div class="blue-box"></div>
         </div>
 
-        <div class="gray-box-group">
+        <div class="gray-section">
             <div class="gray-box"></div>
             <div class="gray-box"></div>
             <div class="gray-box"></div>
