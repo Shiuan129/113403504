@@ -1,72 +1,64 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Layout</title>
     <style>
         body {
-            background-color: #64a5f2;
+            background-color: #7EB1F3;
             display: flex;
             justify-content: center;
             padding: 20px;
-            margin: 0;
         }
 
         .container {
             background-color: white;
-            width: 100%;
-            max-width: 600px;
             padding: 15px;
             border-radius: 10px;
-            box-sizing: border-box;
-        }
-
-        .box {
-            border-radius: 4px;
-            margin: 5px;
+            width: 100%;
+            max-width: 500px;
         }
 
         .header {
-            background-color: #b5d66d;
+            background-color: #B2D265;
             height: 100px;
+            margin-bottom: 10px;
+            border-radius: 4px;
         }
 
-        .main-content {
+        .blue-box-group {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 10px;
         }
 
-        .cyan {
-            background-color: #59bcc9;
-            height: 50px;
+        .blue-box {
+            background-color: #59BCC8;
+            height: 120px;
+            flex: 1;
+            border-radius: 4px;
         }
 
-        .footer {
+        .gray-box-group {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-top: 5px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
         }
 
-        .gray {
-            background-color: #eaeded;
+        .gray-box {
+            background-color: #E8EAEF;
             height: 40px;
-            margin: 3px;
+            border-radius: 4px;
         }
 
-        @media screen and (min-width: 480px) {
-            .main-content {
-                flex-direction: row;
-                height: 150px;
-            }
-            
-            .cyan {
-                flex: 1;
-                height: auto;
+        @media (max-width: 480px) {
+            .blue-box-group {
+                flex-direction: column;
             }
 
-            .footer {
-                grid-template-columns: repeat(4, 1fr);
+            .gray-box-group {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -74,19 +66,19 @@
 <body>
 
     <div class="container">
-        <div class="header box"></div>
+        <div class="header"></div>
 
-        <div class="main-content">
-            <div class="cyan box"></div>
-            <div class="cyan box"></div>
-            <div class="cyan box"></div>
+        <div class="blue-box-group">
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
         </div>
 
-        <div class="footer">
-            <div class="gray box"></div>
-            <div class="gray box"></div>
-            <div class="gray box"></div>
-            <div class="gray box"></div>
+        <div class="gray-box-group">
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
         </div>
     </div>
 
