@@ -2,33 +2,25 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Image Styling</title>
+    <title>CSS Image Practice</title>
     <style>
         body {
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            max-width: 1200px;
             gap: 20px;
         }
 
-        .left {
+        .img-left {
             width: 33%;
             height: 300px;
             border-radius: 18px;
             object-fit: cover;
         }
 
-        .middle {
+        .img-middle {
             width: 150px;
             height: 150px;
             border-radius: 50%;
@@ -37,7 +29,7 @@
             flex-shrink: 0;
         }
 
-        .right {
+        .img-right {
             width: 33%;
             height: 300px;
         }
@@ -45,11 +37,9 @@
 </head>
 <body>
 
-    <div class="container">
-        <img src="你的照片檔名.jpg" class="left">
-        <img src="你的另一張照片檔名.jpg" class="middle">
-        <img src="你的照片檔名.jpg" class="right">
-    </div>
+    <img src="pic1.jpg" class="img-left">
+    <img src="pic2.jpg" class="img-middle">
+    <img src="pic1.jpg" class="img-right">
 
 </body>
 </html>
