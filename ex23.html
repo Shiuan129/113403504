@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
+<meta charset="UTF-8">
 <style>
   .btn {
     display: inline-flex;
@@ -16,10 +17,31 @@
     font-size: 13px;
     cursor: pointer;
     box-sizing: border-box;
+    outline: none;
+    transition: background-color 0.2s;
+  }
+  .btn:hover {
+    background-color: #f5f5f5;
+  }
+  .btn:active {
+    background-color: #eeeeee;
   }
 </style>
 </head>
 <body>
-  <button class="btn">查看資訊</button>
+
+<button id="infoBtn" class="btn">查看資訊</button>
+
+<script>
+  const btn = document.getElementById('infoBtn');
+  btn.addEventListener('click', function() {
+    if (this.textContent === '查看資訊') {
+      this.textContent = '收起資訊';
+    } else {
+      this.textContent = '查看資訊';
+    }
+  });
+</script>
+
 </body>
 </html>
