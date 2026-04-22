@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Practice</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left {
+            width: 33%;
+            height: 300px;
+            border-radius: 18px;
+            object-fit: cover;
+        }
+
+        .middle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            object-fit: cover;
+        }
+
+        .right {
+            width: 33%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="pic1.jpg" class="left">
+        <img src="pic2.jpg" class="middle">
+        <img src="pic1.jpg" class="right">
+    </div>
+
+</body>
+</html>
