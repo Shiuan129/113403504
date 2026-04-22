@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #7EB1F3;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .header {
+            background-color: #B2D265;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .blue-box-group {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .blue-box {
+            background-color: #59BCC8;
+            height: 120px;
+            flex: 1;
+            border-radius: 4px;
+        }
+
+        .gray-box-group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .gray-box {
+            background-color: #E8EAEF;
+            height: 40px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 480px) {
+            .blue-box-group {
+                flex-direction: column;
+            }
+
+            .gray-box-group {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header"></div>
+
+        <div class="blue-box-group">
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
+            <div class="blue-box"></div>
+        </div>
+
+        <div class="gray-box-group">
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+            <div class="gray-box"></div>
+        </div>
+    </div>
+
+</body>
+</html>
