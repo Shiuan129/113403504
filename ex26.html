@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Practice</title>
+    <title>CSS Image Styling</title>
     <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            width: 90%;
+            gap: 20px;
         }
 
         .left {
@@ -23,6 +33,7 @@
             border-radius: 50%;
             border: 1px solid #000;
             object-fit: cover;
+            flex-shrink: 0;
         }
 
         .right {
