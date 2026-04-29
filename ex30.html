@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="text">Hello</h1>
+    <button id="btn">Button</button>
+
+    <script>
+        const text = document.getElementById('text');
+        const btn = document.getElementById('btn');
+
+        btn.onmouseover = () => {
+            text.style.color = 'magenta';
+            text.innerText = 'Hello';
+        };
+
+        btn.onclick = () => {
+            text.style.color = 'magenta';
+            text.innerText = 'Mouse Click';
+        };
+    </script>
+</body>
+</html>
