@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Page</title>
+    <style>
+        #text {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: black;
+        }
+    </style>
+</head>
 <body>
-    <h1 id="text">Hello</h1>
+
+    <div id="text">Hello</div>
     <button id="btn">Button</button>
 
     <script>
-        const text = document.getElementById('text');
-        const btn = document.getElementById('btn');
+        const textElement = document.getElementById('text');
+        const buttonElement = document.getElementById('btn');
 
-        btn.onmouseover = () => {
-            text.style.color = 'magenta';
-            text.innerText = 'Hello';
-        };
+        buttonElement.addEventListener('mouseover', () => {
+            textElement.style.color = 'orchid';
+        });
 
-        btn.onclick = () => {
-            text.style.color = 'magenta';
-            text.innerText = 'Mouse Click';
-        };
+        buttonElement.addEventListener('mouseout', () => {
+            if (textElement.innerText === 'Hello') {
+                textElement.style.color = 'black';
+            }
+        });
+
+        buttonElement.addEventListener('click', () => {
+            textElement.innerText = 'Mouse Click';
+            textElement.style.color = 'orchid';
+        });
     </script>
+
 </body>
 </html>
+
