@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task</title>
+</head>
+<body>
+    <div id="display"></div>
+
+    <script>
+        var Person = {
+            firstName: "Tony",
+            lastName: "Lee",
+            age: 50,
+            eyeColor: "Blue"
+        };
+
+        const keys = Object.keys(Person).join(", ");
+        delete Person.age;
+
+        document.getElementById("display").innerHTML = `
+            <p>Properties: ${keys}</p>
+            <pre>${JSON.stringify(Person, null, 2)}</pre>
+        `;
+    </script>
+</body>
+</html>
