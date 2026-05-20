@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>Circle Functions</title>
+    <meta charset="UTF-8">
+    <title>Circle Calculator</title>
 </head>
 <body>
-  <script>
-    function calcCircumfrence(radius) {
-      var circumference = 2 * Math.PI * radius;
-      console.log("The circumference is " + circumference);
-    }
 
-    function calcArea(radius) {
-      var area = Math.PI * radius * radius;
-      console.log("The area is " + area);
-    }
+    <script>
+        function calcCircumfrence(radius) {
+            let circumference = 2 * Math.PI * radius;
+            console.log("The circumference is " + circumference);
+        }
 
-    calcCircumfrence(5);
-    calcArea(5);
-  </script>
+        function calcArea(radius) {
+            let area = Math.PI * Math.pow(radius, 2);
+            console.log("The area is " + area);
+        }
+
+        calcCircumfrence(5);
+        calcArea(5);
+    </script>
+
 </body>
 </html>
+
