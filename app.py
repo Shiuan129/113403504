@@ -16,7 +16,7 @@ def show_user_profile(username):
 # EX41 / EX46: Flask Load HTML
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('41_46.html')
 
 # EX42 / EX47: Show Variables
 @app.route('/show_vars')
@@ -26,12 +26,12 @@ def show_variables():
         "age": 30,
         "city": "New York"
     }
-    return render_template('page.html', text="User Profile Info", appInfo=x)
+    return render_template('42_47.html', text="User Profile Info", appInfo=x)
 
 # EX48: Show double of the inputted number
 @app.route("/double")
 def double_index():
-    return render_template("index.html", result=None)
+    return render_template("48.html", result=None)
 
 @app.route("/predict", methods=["POST"])
 def predict():
