@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template - Page (EX42/47)</title>
+</head>
+<body>
+    <h1>{{ text }}</h1>
+    {% if appInfo is not none %}
+    <h2>Object Variables:</h2>
+    <p>Name : {{ appInfo.name }}</p>
+    <p>Age : {{ appInfo.age }}</p>
+    <p>City : {{ appInfo.city }}</p>
+    {% endif %}
+</body>
+</html>
