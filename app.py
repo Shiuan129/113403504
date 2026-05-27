@@ -1,24 +1,42 @@
 from flask import Flask, render_template, request
 from markupsafe import escape
 
-app = Flask(__name__)
+# template_folder='.' 代表讓 Flask 直接在根目錄尋找你的 HTML 檔案
+app = Flask(__name__, template_folder='.')
 
-# EX39 / EX44: Hello Flask
+# ==========================================
+# Exercise 39 & 44: Hello Flask
+# 測試網址: /
+# ==========================================
 @app.route('/')
 def hello_flask():
     return "Hello, World! Flask Server is running."
 
-# EX40 / EX45: URL Info
+
+# ==========================================
+# Exercise 40 & 45: URL Info
+# 測試網址: /user/Jenny
+# ==========================================
 @app.route('/user/<username>')
 def show_user_profile(username):
     return f'User {escape(username)}'
 
-# EX41 / EX46: Flask Load HTML
+
+# ==========================================
+# Exercise 41 & 46: Flask Load HTML
+# 測試網址: /home
+# 使用你建立的 41_46.html
+# ==========================================
 @app.route('/home')
 def home():
     return render_template('41_46.html')
 
-# EX42 / EX47: Show Variables
+
+# ==========================================
+# Exercise 42 & 47: Show Variables
+# 測試網址: /show_vars
+# 使用你建立的 42_47.html
+# ==========================================
 @app.route('/show_vars')
 def show_variables():
     x = {
@@ -28,7 +46,12 @@ def show_variables():
     }
     return render_template('42_47.html', text="User Profile Info", appInfo=x)
 
-# EX48: Show double of the inputted number
+
+# ==========================================
+# Exercise 48: Show double of the inputted number
+# 測試網址: /double 
+# 使用你建立的 48.html
+# ==========================================
 @app.route("/double")
 def double_index():
     return render_template("48.html", result=None)
@@ -37,7 +60,8 @@ def double_index():
 def predict():
     x = int(request.form["x"])
     result = x * 2
-    return render_template("index.html", result=result)
+    return render_template("48.html", result=result)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
